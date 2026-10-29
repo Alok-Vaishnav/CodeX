@@ -1,0 +1,44 @@
+{
+  "name": "filewise",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev Client",
+    "dev:api": "node --watch server/index.mjs",
+    "dev:all": "concurrently -k -n web,api \"npm run dev\" \"npm run dev:api\"",
+    "start:api": "node server/index.mjs",
+    "build": "next build Client",
+    "start": "next start Client"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.11.4",
+    "multer": "^2.5.0",
+    "next": "^15.2.0",
+    "nodemailer": "^10.3.0",
+    "openai": "^7.45.1",
+    "passport": "^0.7.0",
+    "passport-google-oidc": "^0.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.32"
+  }
+}
